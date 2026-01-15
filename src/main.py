@@ -34,11 +34,11 @@ def img_1():
     gIntensity = 0.7
     bIntensity = 0.8
 
-    noiseIntensity = 0.3
+    noiseIntensity = 150
 
-    rChF = rCh * rIntensity + (np.random.random(rCh.shape) - 0.5) * 150
-    gChF = gCh * rIntensity + (np.random.random(gCh.shape) - 0.5) * 150
-    bChF = bCh * bIntensity + (np.random.random(rCh.shape) - 0.5) * 150
+    rChF = rCh * rIntensity + (np.random.random(rCh.shape) - 0.5) * noiseIntensity
+    gChF = gCh * gIntensity + (np.random.random(gCh.shape) - 0.5) * noiseIntensity
+    bChF = bCh * bIntensity + (np.random.random(rCh.shape) - 0.5) * noiseIntensity
 
     rChF = np.roll(rChF, axis=1, shift=25)
 
